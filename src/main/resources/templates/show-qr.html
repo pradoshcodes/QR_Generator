@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>QR Code</title>
+</head>
+<body>
+
+<h2>QR Code Generated</h2>
+
+<p><b>Shop Name:</b> <span th:text="${user.name}"></span></p>
+
+<img th:src="@{'/qr/' + ${user.id}}" />
+
+<br><br>
+<p>Scan this QR using mobile</p>
+
+</body>
+</html>

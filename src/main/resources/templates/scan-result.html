@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Scan Result</title>
+</head>
+<body>
+
+<h2>QR Scan Result</h2>
+
+<div th:if="${user != null}">
+    <p><b>Shop Name:</b> <span th:text="${user.name}"></span></p>
+    <p><b>User ID:</b> <span th:text="${user.id}"></span></p>
+</div>
+
+<div th:if="${user == null}">
+    <p style="color:red;">Invalid QR Code</p>
+</div>
+
+</body>
+</html>
